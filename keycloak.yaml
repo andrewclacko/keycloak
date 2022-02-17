@@ -15,10 +15,10 @@ metadata:
 spec:
   tls:
     - hosts:
-      - kubernetes.docker.internal
+      - keycloak.kubernetes.docker.internal
       secretName: keycloak-tls
   rules:
-  - host: kubernetes.docker.internal
+  - host: keycloak.kubernetes.docker.internal
     http:
       paths:
       - path: /
