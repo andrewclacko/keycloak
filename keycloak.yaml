@@ -13,6 +13,8 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx-example
+spec:
   tls:
     - hosts:
       - keycloak.kubernetes.docker.internal
