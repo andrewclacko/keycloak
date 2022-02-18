@@ -41,7 +41,6 @@ spec:
     targetPort: 8080
   selector:
     app: keycloak
-#  type: NodePort
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -75,7 +74,3 @@ spec:
           containerPort: 8080
         - name: https
           containerPort: 8443
-        readinessProbe:
-          httpGet:
-            path: /auth/realms/master
-            port: 8080
