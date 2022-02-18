@@ -12,7 +12,6 @@ metadata:
   namespace: keycloak
 spec:
   ingressClassName: nginx
-spec:
   tls:
     - hosts:
       - kubernetes.docker.internal
