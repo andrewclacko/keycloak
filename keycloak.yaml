@@ -10,13 +10,15 @@ kind: Ingress
 metadata:
   name: keycloak
   namespace: keycloak
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   tls:
     - hosts:
-      - keycloak.kubernetes.docker.internal
+      - kubernetes.docker.internal
       secretName: keycloak-tls
   rules:
-  - host: keycloak.kubernetes.docker.internal
+  - host: kubernetes.docker.internal
     http:
       paths:
       - path: /
