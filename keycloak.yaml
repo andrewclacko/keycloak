@@ -19,7 +19,7 @@ spec:
   - host: keycloak.kubernetes.docker.internal
     http:
       paths:
-      - path: /
+      - path: /auth
         pathType: Prefix
         backend:
           service:
