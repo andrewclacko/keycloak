@@ -15,7 +15,7 @@ spec:
   tls:
     - hosts:
       - keycloak.kubernetes.docker.internal
-      secretName: wildcard-tls
+      secretName: keycloak-tls
   rules:
   - host: keycloak.kubernetes.docker.internal
     http:
