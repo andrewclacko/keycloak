@@ -17,7 +17,7 @@ spec:
       - kubernetes.docker.internal
       secretName: keycloak
   rules:
-  - host: keycloak.kubernetes.docker.internal
+  - host: kubernetes.docker.internal
     http:
       paths:
       - path: /auth
