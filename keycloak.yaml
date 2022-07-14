@@ -14,13 +14,13 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-      - keycloak.kubernetes.docker.internal
+      - kubernetes.docker.internal
       secretName: keycloak
   rules:
   - host: keycloak.kubernetes.docker.internal
     http:
       paths:
-      - path: /
+      - path: /auth
         pathType: Prefix
         backend:
           service:
