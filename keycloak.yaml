@@ -20,7 +20,7 @@ spec:
   - host: kubernetes.docker.internal
     http:
       paths:
-      - path: /auth
+      - path: /
         pathType: Prefix
         backend:
           service:
