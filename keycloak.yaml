@@ -20,13 +20,13 @@ spec:
   - host: kubernetes.docker.internal
     http:
       paths:
-      - path: /
+      - path: /auth
         pathType: Prefix
         backend:
           service:
             name: keycloak
             port:
-              number: 8080
+              number: 8443
 ---
 apiVersion: v1
 kind: Service
@@ -38,8 +38,8 @@ metadata:
 spec:
   ports:
   - name: http
-    port: 8080
-    targetPort: 8080
+    port: 8443
+    targetPort: 8443
   selector:
     app: keycloak
 ---
@@ -74,6 +74,6 @@ spec:
           value: INFO
         ports:
         - name: http
-          containerPort: 8080
+          containerPort: 8443
         - name: https
           containerPort: 8443
